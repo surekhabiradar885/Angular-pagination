@@ -1,13 +1,13 @@
 # pagination
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
-
+Development steps
 1. npm install ngx-pagination
 2. Import NgxPaginationModule and HttpClientModule modules
 3. Include boostrap from https://getbootstrap.com/ in index.hml
 4. create user service
 5. Use this link for APIs https://jsonplaceholder.typicode.com/
-6. Refer https://www.positronx.io/angular-server-side-pagination-with-ngx-pagination-example/
+
 
 ## Development server
 
