@@ -1,0 +1,30 @@
+<div class="container">
+  <div>
+    <select (change)="onTableSizeChange($event)">
+      <option *ngFor="let size of tableSizes">
+        {{size}}
+      </option>
+    </select>
+  </div>
+  <table class="table">
+    <thead>
+      <th>ID</th>
+      <th>Title</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts| paginate :
+      {itemsPerPage: tableSize,
+        currentPage: page,
+        totalItems: count}; let i=index">
+        <th scope="row">{{post.id}}</th>
+        <td>{{post.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center">
+    <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChange($event)"></pagination-controls>
+  </div>
+</div>
